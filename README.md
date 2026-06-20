@@ -11,7 +11,7 @@ The extension picks a control schema by detecting the output format from the doc
 - **reveal.js decks** (`format: revealjs`) use `presets/quarto-revealjs.json`.
 - **HTML documents** use `presets/quarto-html.json` (Bootstrap variables). This is also the fallback for any format that isn't reveal.js.
 
-Because HTML is the catch-all, other formats (`dashboard`, `beamer`/PDF, `docx`, etc.) currently fall through to the HTML/Bootstrap schema rather than having dedicated presets, so its controls may not all map meaningfully. The only bundled example is `examples/revealjs/`.
+Because HTML is the catch-all, other formats (`dashboard`, `beamer`/PDF, `docx`, etc.) currently fall through to the HTML/Bootstrap schema rather than having dedicated presets, so its controls may not all map meaningfully. Bundled examples live in `examples/revealjs/`, `examples/html/` (a standalone document), and `examples/website/` (a website project that also renders the navbar/sidebar/footer the navigation variables target).
 
 ## How it works
 
@@ -34,7 +34,9 @@ The extension serves its own copy of the rendered HTML (with a bridge client inj
 | `src/webview/bridgeClient.ts` | Injected into the preview; applies `setCssVar` / `replaceStylesheet`. |
 | `presets/quarto-revealjs.json` | Curated control schema for reveal.js decks. |
 | `presets/quarto-html.json` | Curated control schema for HTML documents (Bootstrap vars). |
-| `examples/revealjs/` | Sample `.qmd` + `custom.scss` + `_brand.yml` for testing (plus the original `hotload_server.py` prototype). |
+| `examples/revealjs/` | Sample reveal.js `.qmd` + `custom.scss` + `_brand.yml` for testing (plus the original `hotload_server.py` prototype). |
+| `examples/html/` | Sample standalone HTML `.qmd` + `custom.scss` + `_brand.yml` exercising the HTML/Bootstrap schema. |
+| `examples/website/` | Sample Quarto website project (`_quarto.yml` + pages) exercising the navbar/sidebar/footer variables. |
 
 ## Develop
 

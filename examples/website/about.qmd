@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+A second page so the navbar and sidebar have something to navigate between.
+
+See `index.qmd` for the variables this example is meant to exercise.

@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Brand Demo Site"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+  sidebar:
+    style: floating
+    contents:
+      - index.qmd
+      - about.qmd
+  page-footer:
+    left: "Styled with _brand.yml + custom.scss"
+
+format:
+  html:
+    theme:
+      - brand
+      - custom.scss
+    toc: true

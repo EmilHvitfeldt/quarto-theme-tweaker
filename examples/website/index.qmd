@@ -1,0 +1,22 @@
+---
+title: "Home"
+---
+
+## Overview
+
+This is a Quarto **website** project. Unlike a single HTML document, it renders a navbar, sidebar, and footer, so it exercises the navigation variables in the HTML/Bootstrap schema (`$navbar-bg`, `$navbar-fg`, `$navbar-hl`, `$sidebar-bg`, `$sidebar-fg`, `$sidebar-hl`, `$footer-bg`, `$footer-fg`).
+
+Tweak those from the Theme Tweaker panel to restyle the chrome around the content.
+
+## Content
+
+Body text with a [link](https://quarto.org) and some `inline code`, plus a code block and callouts to cover the rest of the schema.
+
+```r
+fit <- lm(dist ~ speed, data = cars)
+summary(fit)
+```
+
+::: {.callout-note}
+A note callout, accented by `$callout-color-note`.
+:::

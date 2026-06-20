@@ -1,0 +1,41 @@
+---
+title: "Brand Demo"
+format:
+  html:
+    theme:
+      - brand
+      - custom.scss
+    toc: true
+---
+
+## Overview
+
+This HTML document is styled using the `_brand.yml` file in this directory. It exists to exercise the HTML/Bootstrap control schema in the Theme Tweaker (headings, links, code, table of contents, and callouts).
+
+Edit `$h2-font-size` in `custom.scss` to change the section heading size, or tweak any of the variables live from the panel.
+
+## Typography and links
+
+Body text with a [link](https://quarto.org) and some `inline code`. Adjust `$body-color`, `$link-color`, and `$font-size-root` to see these change.
+
+## Code blocks
+
+```r
+# Tweak $code-block-bg, $code-block-border-left, and the copy-button colors
+fit <- lm(dist ~ speed, data = cars)
+summary(fit)
+```
+
+## Callouts
+
+::: {.callout-note}
+A note callout. Drive its accent with `$callout-color-note`.
+:::
+
+::: {.callout-warning}
+A warning callout, plus `$callout-border-width` and `$callout-icon-scale`.
+:::
+
+## Done
+
+Re-render with `quarto render index.qmd`, or use the Theme Tweaker to adjust variables live and commit them back to `custom.scss`.
