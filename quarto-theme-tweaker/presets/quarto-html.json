@@ -5,6 +5,7 @@
       "id": "font-size-root",
       "label": "Root font size",
       "group": "Typography",
+      "subgroup": "Sizing",
       "sassVar": "$font-size-root",
       "widget": "slider",
       "unit": "rem",
@@ -14,9 +15,22 @@
       "default": 1
     },
     {
-      "id": "h1-font-size",
-      "label": "Heading 1 size",
+      "id": "line-height-base",
+      "label": "Line height",
       "group": "Typography",
+      "subgroup": "Sizing",
+      "sassVar": "$line-height-base",
+      "widget": "slider",
+      "min": 1,
+      "max": 2.2,
+      "step": 0.05,
+      "default": 1.5
+    },
+    {
+      "id": "h1-font-size",
+      "label": "Heading 1",
+      "group": "Typography",
+      "subgroup": "Headings",
       "sassVar": "$h1-font-size",
       "widget": "slider",
       "unit": "rem",
@@ -27,8 +41,9 @@
     },
     {
       "id": "h2-font-size",
-      "label": "Heading 2 size",
+      "label": "Heading 2",
       "group": "Typography",
+      "subgroup": "Headings",
       "sassVar": "$h2-font-size",
       "widget": "slider",
       "unit": "rem",
@@ -38,30 +53,10 @@
       "default": 2
     },
     {
-      "id": "line-height-base",
-      "label": "Line height",
-      "group": "Typography",
-      "sassVar": "$line-height-base",
-      "widget": "slider",
-      "min": 1,
-      "max": 2.2,
-      "step": 0.05,
-      "default": 1.5
-    },
-    {
-      "id": "body-color",
-      "label": "Body text color",
-      "group": "Colors",
-      "sassVar": "$body-color",
-      "widget": "color",
-      "default": "#1A1A1A",
-      "cssVar": "--bs-body-color",
-      "applyScope": ":root"
-    },
-    {
       "id": "body-bg",
-      "label": "Background color",
+      "label": "Background",
       "group": "Colors",
+      "subgroup": "Base",
       "sassVar": "$body-bg",
       "widget": "color",
       "default": "#FFFFFF",
@@ -69,19 +64,21 @@
       "applyScope": ":root"
     },
     {
-      "id": "link-color",
-      "label": "Link color",
+      "id": "body-color",
+      "label": "Text",
       "group": "Colors",
-      "sassVar": "$link-color",
+      "subgroup": "Base",
+      "sassVar": "$body-color",
       "widget": "color",
-      "default": "#0072B2",
-      "cssVar": "--bs-link-color",
+      "default": "#1A1A1A",
+      "cssVar": "--bs-body-color",
       "applyScope": ":root"
     },
     {
       "id": "primary",
-      "label": "Primary color",
+      "label": "Primary",
       "group": "Colors",
+      "subgroup": "Theme",
       "sassVar": "$primary",
       "widget": "color",
       "default": "#0072B2",
@@ -89,17 +86,30 @@
       "applyScope": ":root"
     },
     {
-      "id": "code-bg",
-      "label": "Code block background",
+      "id": "link-color",
+      "label": "Link",
       "group": "Colors",
+      "subgroup": "Theme",
+      "sassVar": "$link-color",
+      "widget": "color",
+      "default": "#0072B2",
+      "cssVar": "--bs-link-color",
+      "applyScope": ":root"
+    },
+    {
+      "id": "code-bg",
+      "label": "Code background",
+      "group": "Colors",
+      "subgroup": "Code",
       "sassVar": "$code-bg",
       "widget": "color",
       "default": "#F5F5F5"
     },
     {
       "id": "code-color",
-      "label": "Inline code color",
+      "label": "Inline code",
       "group": "Colors",
+      "subgroup": "Code",
       "sassVar": "$code-color",
       "widget": "color",
       "default": "#E69F00"

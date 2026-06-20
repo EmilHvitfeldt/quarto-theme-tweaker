@@ -2,77 +2,10 @@
   "format": "revealjs",
   "presets": [
     {
-      "id": "body-bg",
-      "label": "Background color",
-      "group": "Colors",
-      "sassVar": "$body-bg",
-      "widget": "color",
-      "default": "#ffffff",
-      "cssVar": "--r-background-color",
-      "applyScope": ":root"
-    },
-    {
-      "id": "body-color",
-      "label": "Body text color",
-      "group": "Colors",
-      "sassVar": "$body-color",
-      "widget": "color",
-      "default": "#222222",
-      "cssVar": "--r-main-color",
-      "applyScope": ":root"
-    },
-    {
-      "id": "link-color",
-      "label": "Link color",
-      "group": "Colors",
-      "sassVar": "$link-color",
-      "widget": "color",
-      "default": "#2a76dd",
-      "cssVar": "--r-link-color",
-      "applyScope": ":root"
-    },
-    {
-      "id": "link-color-hover",
-      "label": "Link hover color",
-      "group": "Colors",
-      "sassVar": "$link-color-hover",
-      "widget": "color",
-      "default": "#6699e6",
-      "cssVar": "--r-link-color-hover",
-      "applyScope": ":root"
-    },
-    {
-      "id": "selection-bg",
-      "label": "Selection background",
-      "group": "Colors",
-      "sassVar": "$selection-bg",
-      "widget": "color",
-      "default": "#98bdee",
-      "cssVar": "--r-selection-background-color",
-      "applyScope": ":root"
-    },
-    {
-      "id": "selection-color",
-      "label": "Selection text color",
-      "group": "Colors",
-      "sassVar": "$selection-color",
-      "widget": "color",
-      "default": "#ffffff",
-      "cssVar": "--r-selection-color",
-      "applyScope": ":root"
-    },
-    {
-      "id": "text-muted",
-      "label": "Muted text color",
-      "group": "Colors",
-      "sassVar": "$text-muted",
-      "widget": "color",
-      "default": "#919191"
-    },
-    {
       "id": "font-family-sans-serif",
-      "label": "Body font family",
-      "group": "Fonts",
+      "label": "Body font",
+      "group": "Typography",
+      "subgroup": "Fonts",
       "sassVar": "$font-family-sans-serif",
       "widget": "select",
       "options": [
@@ -88,8 +21,9 @@
     },
     {
       "id": "font-family-monospace",
-      "label": "Monospace font family",
-      "group": "Fonts",
+      "label": "Monospace font",
+      "group": "Typography",
+      "subgroup": "Fonts",
       "sassVar": "$font-family-monospace",
       "widget": "select",
       "options": [
@@ -105,7 +39,8 @@
     {
       "id": "presentation-font-size-root",
       "label": "Root font size",
-      "group": "Fonts",
+      "group": "Typography",
+      "subgroup": "Sizing",
       "sassVar": "$presentation-font-size-root",
       "widget": "slider",
       "unit": "px",
@@ -117,20 +52,10 @@
       "applyScope": ":root"
     },
     {
-      "id": "presentation-font-smaller",
-      "label": "Smaller-text scale",
-      "group": "Fonts",
-      "sassVar": "$presentation-font-smaller",
-      "widget": "slider",
-      "min": 0.4,
-      "max": 1,
-      "step": 0.05,
-      "default": 0.7
-    },
-    {
       "id": "presentation-line-height",
-      "label": "Body line height",
-      "group": "Fonts",
+      "label": "Line height",
+      "group": "Typography",
+      "subgroup": "Sizing",
       "sassVar": "$presentation-line-height",
       "widget": "slider",
       "min": 1,
@@ -139,9 +64,22 @@
       "default": 1.3
     },
     {
+      "id": "presentation-font-smaller",
+      "label": "Smaller-text scale",
+      "group": "Typography",
+      "subgroup": "Sizing",
+      "sassVar": "$presentation-font-smaller",
+      "widget": "slider",
+      "min": 0.4,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.7
+    },
+    {
       "id": "presentation-h1-font-size",
-      "label": "Heading 1 size",
+      "label": "Heading 1",
       "group": "Headings",
+      "subgroup": "Sizes",
       "sassVar": "$presentation-h1-font-size",
       "widget": "slider",
       "unit": "em",
@@ -154,8 +92,9 @@
     },
     {
       "id": "presentation-h2-font-size",
-      "label": "Heading 2 size",
+      "label": "Heading 2",
       "group": "Headings",
+      "subgroup": "Sizes",
       "sassVar": "$presentation-h2-font-size",
       "widget": "slider",
       "unit": "em",
@@ -168,8 +107,9 @@
     },
     {
       "id": "presentation-h3-font-size",
-      "label": "Heading 3 size",
+      "label": "Heading 3",
       "group": "Headings",
+      "subgroup": "Sizes",
       "sassVar": "$presentation-h3-font-size",
       "widget": "slider",
       "unit": "em",
@@ -182,8 +122,9 @@
     },
     {
       "id": "presentation-h4-font-size",
-      "label": "Heading 4 size",
+      "label": "Heading 4",
       "group": "Headings",
+      "subgroup": "Sizes",
       "sassVar": "$presentation-h4-font-size",
       "widget": "slider",
       "unit": "em",
@@ -196,8 +137,9 @@
     },
     {
       "id": "presentation-heading-font",
-      "label": "Heading font family",
+      "label": "Font",
       "group": "Headings",
+      "subgroup": "Style",
       "sassVar": "$presentation-heading-font",
       "widget": "select",
       "options": [
@@ -213,8 +155,9 @@
     },
     {
       "id": "presentation-heading-color",
-      "label": "Heading color",
+      "label": "Color",
       "group": "Headings",
+      "subgroup": "Style",
       "sassVar": "$presentation-heading-color",
       "widget": "color",
       "default": "#222222",
@@ -222,9 +165,22 @@
       "applyScope": ":root"
     },
     {
-      "id": "presentation-heading-line-height",
-      "label": "Heading line height",
+      "id": "presentation-heading-font-weight",
+      "label": "Weight",
       "group": "Headings",
+      "subgroup": "Style",
+      "sassVar": "$presentation-heading-font-weight",
+      "widget": "select",
+      "options": ["300", "400", "500", "600", "700", "800", "900"],
+      "default": "600",
+      "cssVar": "--r-heading-font-weight",
+      "applyScope": ":root"
+    },
+    {
+      "id": "presentation-heading-line-height",
+      "label": "Line height",
+      "group": "Headings",
+      "subgroup": "Style",
       "sassVar": "$presentation-heading-line-height",
       "widget": "slider",
       "min": 0.8,
@@ -236,8 +192,9 @@
     },
     {
       "id": "presentation-heading-letter-spacing",
-      "label": "Heading letter spacing",
+      "label": "Letter spacing",
       "group": "Headings",
+      "subgroup": "Style",
       "sassVar": "$presentation-heading-letter-spacing",
       "widget": "slider",
       "unit": "px",
@@ -250,8 +207,9 @@
     },
     {
       "id": "presentation-heading-text-transform",
-      "label": "Heading text transform",
+      "label": "Text transform",
       "group": "Headings",
+      "subgroup": "Style",
       "sassVar": "$presentation-heading-text-transform",
       "widget": "select",
       "options": ["none", "uppercase", "lowercase", "capitalize"],
@@ -260,36 +218,103 @@
       "applyScope": ":root"
     },
     {
-      "id": "presentation-heading-font-weight",
-      "label": "Heading font weight",
-      "group": "Headings",
-      "sassVar": "$presentation-heading-font-weight",
-      "widget": "select",
-      "options": ["300", "400", "500", "600", "700", "800", "900"],
-      "default": "600",
-      "cssVar": "--r-heading-font-weight",
+      "id": "body-bg",
+      "label": "Background",
+      "group": "Colors",
+      "subgroup": "Base",
+      "sassVar": "$body-bg",
+      "widget": "color",
+      "default": "#ffffff",
+      "cssVar": "--r-background-color",
+      "applyScope": ":root"
+    },
+    {
+      "id": "body-color",
+      "label": "Text",
+      "group": "Colors",
+      "subgroup": "Base",
+      "sassVar": "$body-color",
+      "widget": "color",
+      "default": "#222222",
+      "cssVar": "--r-main-color",
+      "applyScope": ":root"
+    },
+    {
+      "id": "text-muted",
+      "label": "Muted text",
+      "group": "Colors",
+      "subgroup": "Base",
+      "sassVar": "$text-muted",
+      "widget": "color",
+      "default": "#919191"
+    },
+    {
+      "id": "link-color",
+      "label": "Link",
+      "group": "Colors",
+      "subgroup": "Links",
+      "sassVar": "$link-color",
+      "widget": "color",
+      "default": "#2a76dd",
+      "cssVar": "--r-link-color",
+      "applyScope": ":root"
+    },
+    {
+      "id": "link-color-hover",
+      "label": "Link (hover)",
+      "group": "Colors",
+      "subgroup": "Links",
+      "sassVar": "$link-color-hover",
+      "widget": "color",
+      "default": "#6699e6",
+      "cssVar": "--r-link-color-hover",
+      "applyScope": ":root"
+    },
+    {
+      "id": "selection-bg",
+      "label": "Selection background",
+      "group": "Colors",
+      "subgroup": "Selection",
+      "sassVar": "$selection-bg",
+      "widget": "color",
+      "default": "#98bdee",
+      "cssVar": "--r-selection-background-color",
+      "applyScope": ":root"
+    },
+    {
+      "id": "selection-color",
+      "label": "Selection text",
+      "group": "Colors",
+      "subgroup": "Selection",
+      "sassVar": "$selection-color",
+      "widget": "color",
+      "default": "#ffffff",
+      "cssVar": "--r-selection-color",
       "applyScope": ":root"
     },
     {
       "id": "code-block-bg",
-      "label": "Code block background",
+      "label": "Background",
       "group": "Code",
+      "subgroup": "Code blocks",
       "sassVar": "$code-block-bg",
       "widget": "color",
       "default": "#ffffff"
     },
     {
       "id": "code-block-border-color",
-      "label": "Code block border",
+      "label": "Border",
       "group": "Code",
+      "subgroup": "Code blocks",
       "sassVar": "$code-block-border-color",
       "widget": "color",
       "default": "#cccccc"
     },
     {
       "id": "code-block-font-size",
-      "label": "Code block font size",
+      "label": "Font size",
       "group": "Code",
+      "subgroup": "Code blocks",
       "sassVar": "$code-block-font-size",
       "widget": "slider",
       "unit": "em",
@@ -300,56 +325,27 @@
     },
     {
       "id": "code-color",
-      "label": "Inline code color",
+      "label": "Text",
       "group": "Code",
+      "subgroup": "Inline code",
       "sassVar": "$code-color",
       "widget": "color",
       "default": "#4758ab"
     },
     {
       "id": "code-bg",
-      "label": "Inline code background",
+      "label": "Background",
       "group": "Code",
+      "subgroup": "Inline code",
       "sassVar": "$code-bg",
       "widget": "color",
       "default": "#ffffff"
     },
     {
-      "id": "border-color",
-      "label": "Border color",
-      "group": "Layout",
-      "sassVar": "$border-color",
-      "widget": "color",
-      "default": "#6f6f6f"
-    },
-    {
-      "id": "border-width",
-      "label": "Border width",
-      "group": "Layout",
-      "sassVar": "$border-width",
-      "widget": "slider",
-      "unit": "px",
-      "min": 0,
-      "max": 8,
-      "step": 1,
-      "default": 1
-    },
-    {
-      "id": "border-radius",
-      "label": "Border radius",
-      "group": "Layout",
-      "sassVar": "$border-radius",
-      "widget": "slider",
-      "unit": "px",
-      "min": 0,
-      "max": 24,
-      "step": 1,
-      "default": 3
-    },
-    {
       "id": "presentation-block-margin",
       "label": "Block margin",
       "group": "Layout",
+      "subgroup": "Spacing",
       "sassVar": "$presentation-block-margin",
       "widget": "slider",
       "unit": "px",
@@ -362,8 +358,9 @@
     },
     {
       "id": "presentation-slide-text-align",
-      "label": "Slide text align",
+      "label": "Slide text",
       "group": "Layout",
+      "subgroup": "Alignment",
       "sassVar": "$presentation-slide-text-align",
       "widget": "select",
       "options": ["left", "center", "right"],
@@ -371,16 +368,52 @@
     },
     {
       "id": "presentation-title-slide-text-align",
-      "label": "Title slide text align",
+      "label": "Title slide text",
       "group": "Layout",
+      "subgroup": "Alignment",
       "sassVar": "$presentation-title-slide-text-align",
       "widget": "select",
       "options": ["left", "center", "right"],
       "default": "center"
     },
     {
+      "id": "border-color",
+      "label": "Color",
+      "group": "Layout",
+      "subgroup": "Borders",
+      "sassVar": "$border-color",
+      "widget": "color",
+      "default": "#6f6f6f"
+    },
+    {
+      "id": "border-width",
+      "label": "Width",
+      "group": "Layout",
+      "subgroup": "Borders",
+      "sassVar": "$border-width",
+      "widget": "slider",
+      "unit": "px",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "id": "border-radius",
+      "label": "Radius",
+      "group": "Layout",
+      "subgroup": "Borders",
+      "sassVar": "$border-radius",
+      "widget": "slider",
+      "unit": "px",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "default": 3
+    },
+    {
       "id": "callout-color-note",
-      "label": "Callout: note",
+      "label": "Note",
       "group": "Callouts",
       "sassVar": "$callout-color-note",
       "widget": "color",
@@ -388,7 +421,7 @@
     },
     {
       "id": "callout-color-tip",
-      "label": "Callout: tip",
+      "label": "Tip",
       "group": "Callouts",
       "sassVar": "$callout-color-tip",
       "widget": "color",
@@ -396,7 +429,7 @@
     },
     {
       "id": "callout-color-caution",
-      "label": "Callout: caution",
+      "label": "Caution",
       "group": "Callouts",
       "sassVar": "$callout-color-caution",
       "widget": "color",
@@ -404,7 +437,7 @@
     },
     {
       "id": "callout-color-warning",
-      "label": "Callout: warning",
+      "label": "Warning",
       "group": "Callouts",
       "sassVar": "$callout-color-warning",
       "widget": "color",
@@ -412,7 +445,7 @@
     },
     {
       "id": "callout-color-important",
-      "label": "Callout: important",
+      "label": "Important",
       "group": "Callouts",
       "sassVar": "$callout-color-important",
       "widget": "color",

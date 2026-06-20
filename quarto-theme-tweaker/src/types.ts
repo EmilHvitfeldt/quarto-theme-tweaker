@@ -7,6 +7,8 @@ export interface Preset {
   id: string;
   label: string;
   group: string;
+  /** Optional finer grouping within a `group` (rendered as a sub-header). */
+  subgroup?: string;
   /** Sass variable name, including leading `$`. */
   sassVar: string;
   widget: Widget;
