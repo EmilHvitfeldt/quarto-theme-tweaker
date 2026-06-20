@@ -1,8 +1,17 @@
 # Quarto Theme Tweaker
 
-A Positron/VS Code extension for live Sass theming of Quarto documents. Sliders and color pickers bound to Sass variables let you tweak a rendered Quarto deck and see the changes instantly, then write the values back into `custom.scss`.
+A Positron/VS Code extension for live Sass theming of Quarto documents. Sliders and color pickers bound to Sass variables let you tweak a rendered Quarto document and see the changes instantly, then write the values back into `custom.scss`.
 
 It generalizes the original `hotload_server.py` prototype (kept under `examples/revealjs/`) into a schema-driven, multi-variable, hybrid engine.
+
+## Supported formats
+
+The extension picks a control schema by detecting the output format from the document's YAML front matter:
+
+- **reveal.js decks** (`format: revealjs`) use `presets/quarto-revealjs.json`.
+- **HTML documents** use `presets/quarto-html.json` (Bootstrap variables). This is also the fallback for any format that isn't reveal.js.
+
+Because HTML is the catch-all, other formats (`dashboard`, `beamer`/PDF, `docx`, etc.) currently fall through to the HTML/Bootstrap schema rather than having dedicated presets, so its controls may not all map meaningfully. The only bundled example is `examples/revealjs/`.
 
 ## How it works
 
