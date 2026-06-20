@@ -3,7 +3,7 @@
   "displayName": "Quarto Theme Tweaker",
   "description": "Live Sass theming for Quarto documents: sliders and color pickers bound to Sass variables, with instant preview and write-back to custom.scss.",
   "version": "0.0.1",
-  "publisher": "emilhvitfeldt",
+  "publisher": "EmilHvitfeldt",
   "license": "MIT",
   "author": "Emil Hvitfeldt",
   "repository": {
@@ -21,6 +21,8 @@
     "vscode": "^1.85.0"
   },
   "categories": [
+    "Visualization",
+    "Themes",
     "Other"
   ],
   "main": "./dist/extension.js",
@@ -58,13 +60,18 @@
     "vscode:prepublish": "npm run build",
     "build": "node esbuild.mjs --production",
     "watch": "node esbuild.mjs --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "publish:ovsx": "ovsx publish"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/vscode": "^1.85.0",
     "@types/ws": "^8.5.10",
+    "@vscode/vsce": "^2.24.0",
     "esbuild": "^0.20.0",
+    "ovsx": "^0.9.0",
     "typescript": "^5.4.0"
   },
   "dependencies": {

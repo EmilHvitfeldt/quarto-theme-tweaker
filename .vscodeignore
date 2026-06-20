@@ -1,6 +1,7 @@
 # Files excluded from the packaged .vsix (everything not needed at runtime).
 .vscode/**
 .github/**
+.claude/**
 src/**
 examples/**
 node_modules/**

@@ -52,10 +52,36 @@ Then press **F5** in VS Code/Positron (the bundled `Run Extension` launch config
 ## Package
 
 ```bash
-npx vsce package     # produces quarto-theme-tweaker-<version>.vsix
+npm run package      # vsce package -> quarto-theme-tweaker-<version>.vsix
 ```
 
-`.vscodeignore` keeps the `.vsix` to just `dist/`, `presets/`, `package.json`, and `README.md`.
+`.vscodeignore` keeps the `.vsix` to just `dist/`, `presets/`, `package.json`, `README.md`, `CHANGELOG.md`, and `LICENSE`.
+
+## Publish
+
+The extension is published to both the [VS Code Marketplace](https://marketplace.visualstudio.com/) and [Open VSX](https://open-vsx.org/) (used by Positron, VSCodium, and others).
+
+### One-time setup
+
+1. **VS Code Marketplace** — create the `EmilHvitfeldt` publisher at [marketplace.visualstudio.com/manage](https://marketplace.visualstudio.com/manage). Generate an Azure DevOps Personal Access Token (organization-wide, scope **Marketplace → Manage**), then log in:
+
+   ```bash
+   npx vsce login EmilHvitfeldt
+   ```
+
+2. **Open VSX** — sign in at [open-vsx.org](https://open-vsx.org/) with GitHub, sign the publisher agreement, create the `EmilHvitfeldt` namespace if it doesn't exist, and generate an access token under your profile settings.
+
+### Releasing a new version
+
+```bash
+npm version patch                       # or minor / major; updates package.json + git tag
+# update CHANGELOG.md with the new version's notes
+
+npm run publish                         # VS Code Marketplace (uses vsce login)
+npm run publish:ovsx -- -p <OPEN_VSX_TOKEN>   # Open VSX
+```
+
+`vscode:prepublish` runs the production build automatically, so both commands package the latest `dist/` before uploading.
 
 ## Settings
 
