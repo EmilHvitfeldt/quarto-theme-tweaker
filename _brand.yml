@@ -1,0 +1,20 @@
+meta:
+  name: My Brand
+
+color:
+  palette:
+    blue: "#0072B2"
+    orange: "#E69F00"
+    dark: "#1A1A1A"
+    light: "#F5F5F5"
+  background: light
+  foreground: dark
+  primary: blue
+  secondary: orange
+
+typography:
+  base:
+    family: Open Sans
+  headings:
+    family: Open Sans
+    weight: 700

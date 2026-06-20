@@ -1,0 +1,25 @@
+---
+title: "Brand Demo"
+format:
+  revealjs:
+    theme:
+      - brand
+      - custom.scss
+---
+
+## Overview
+
+This presentation is styled using the `_brand.yml` file in this directory.
+
+Edit `$h2-font-size` in `custom.scss` to change the slide heading size.
+
+## A plot
+
+```{r}
+#| echo: false
+plot(cars)
+```
+
+## Done
+
+Re-render with `quarto render index.qmd`, or use the hot-load server to resize headings live.
