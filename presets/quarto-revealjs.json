@@ -171,7 +171,15 @@
       "subgroup": "Style",
       "sassVar": "$presentation-heading-font-weight",
       "widget": "select",
-      "options": ["300", "400", "500", "600", "700", "800", "900"],
+      "options": [
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800",
+        "900"
+      ],
       "default": "600",
       "cssVar": "--r-heading-font-weight",
       "applyScope": ":root"
@@ -212,9 +220,46 @@
       "subgroup": "Style",
       "sassVar": "$presentation-heading-text-transform",
       "widget": "select",
-      "options": ["none", "uppercase", "lowercase", "capitalize"],
+      "options": [
+        "none",
+        "uppercase",
+        "lowercase",
+        "capitalize"
+      ],
       "default": "none",
       "cssVar": "--r-heading-text-transform",
+      "applyScope": ":root"
+    },
+    {
+      "id": "presentation-heading-text-shadow",
+      "label": "Heading text shadow",
+      "group": "Headings",
+      "subgroup": "Style",
+      "sassVar": "$presentation-heading-text-shadow",
+      "widget": "select",
+      "options": [
+        "none",
+        "0 1px 2px rgba(0,0,0,0.3)",
+        "0 2px 4px rgba(0,0,0,0.4)"
+      ],
+      "default": "none",
+      "cssVar": "--r-heading-text-shadow",
+      "applyScope": ":root"
+    },
+    {
+      "id": "presentation-h1-text-shadow",
+      "label": "Heading 1 text shadow",
+      "group": "Headings",
+      "subgroup": "Style",
+      "sassVar": "$presentation-h1-text-shadow",
+      "widget": "select",
+      "options": [
+        "none",
+        "0 1px 0 #ccc, 0 2px 0 #c9c9c9",
+        "0 2px 4px rgba(0,0,0,0.4)"
+      ],
+      "default": "none",
+      "cssVar": "--r-heading1-text-shadow",
       "applyScope": ":root"
     },
     {
@@ -293,6 +338,60 @@
       "applyScope": ":root"
     },
     {
+      "id": "light-bg-text-color",
+      "label": "Light slide text",
+      "group": "Colors",
+      "subgroup": "Light/dark slides",
+      "sassVar": "$light-bg-text-color",
+      "widget": "color",
+      "default": "#222222"
+    },
+    {
+      "id": "light-bg-link-color",
+      "label": "Light slide link",
+      "group": "Colors",
+      "subgroup": "Light/dark slides",
+      "sassVar": "$light-bg-link-color",
+      "widget": "color",
+      "default": "#2a76dd"
+    },
+    {
+      "id": "light-bg-code-color",
+      "label": "Light slide code",
+      "group": "Colors",
+      "subgroup": "Light/dark slides",
+      "sassVar": "$light-bg-code-color",
+      "widget": "color",
+      "default": "#4758ab"
+    },
+    {
+      "id": "dark-bg-text-color",
+      "label": "Dark slide text",
+      "group": "Colors",
+      "subgroup": "Light/dark slides",
+      "sassVar": "$dark-bg-text-color",
+      "widget": "color",
+      "default": "#fff"
+    },
+    {
+      "id": "dark-bg-link-color",
+      "label": "Dark slide link",
+      "group": "Colors",
+      "subgroup": "Light/dark slides",
+      "sassVar": "$dark-bg-link-color",
+      "widget": "color",
+      "default": "#42affa"
+    },
+    {
+      "id": "dark-bg-code-color",
+      "label": "Dark slide code",
+      "group": "Colors",
+      "subgroup": "Light/dark slides",
+      "sassVar": "$dark-bg-code-color",
+      "widget": "color",
+      "default": "#ffa07a"
+    },
+    {
       "id": "code-block-bg",
       "label": "Background",
       "group": "Code",
@@ -363,7 +462,11 @@
       "subgroup": "Alignment",
       "sassVar": "$presentation-slide-text-align",
       "widget": "select",
-      "options": ["left", "center", "right"],
+      "options": [
+        "left",
+        "center",
+        "right"
+      ],
       "default": "left"
     },
     {
@@ -373,7 +476,11 @@
       "subgroup": "Alignment",
       "sassVar": "$presentation-title-slide-text-align",
       "widget": "select",
-      "options": ["left", "center", "right"],
+      "options": [
+        "left",
+        "center",
+        "right"
+      ],
       "default": "center"
     },
     {
@@ -412,12 +519,87 @@
       "default": 3
     },
     {
+      "id": "tabset-border-color",
+      "label": "Tabset border",
+      "group": "Layout",
+      "subgroup": "Borders",
+      "sassVar": "$tabset-border-color",
+      "widget": "color",
+      "default": "#dee2e6"
+    },
+    {
+      "id": "callout-border-width",
+      "label": "Border width",
+      "group": "Callouts",
+      "subgroup": "Layout",
+      "sassVar": "$callout-border-width",
+      "widget": "slider",
+      "unit": "px",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "id": "callout-border-scale",
+      "label": "Border color shift",
+      "group": "Callouts",
+      "subgroup": "Layout",
+      "sassVar": "$callout-border-scale",
+      "widget": "slider",
+      "unit": "%",
+      "min": -100,
+      "max": 100,
+      "step": 5,
+      "default": 0
+    },
+    {
+      "id": "callout-icon-scale",
+      "label": "Icon color shift",
+      "group": "Callouts",
+      "subgroup": "Layout",
+      "sassVar": "$callout-icon-scale",
+      "widget": "slider",
+      "unit": "%",
+      "min": -100,
+      "max": 100,
+      "step": 5,
+      "default": 10
+    },
+    {
+      "id": "callout-margin-top",
+      "label": "Margin top",
+      "group": "Callouts",
+      "subgroup": "Layout",
+      "sassVar": "$callout-margin-top",
+      "widget": "slider",
+      "unit": "rem",
+      "min": 0,
+      "max": 3,
+      "step": 0.25,
+      "default": 1.25
+    },
+    {
+      "id": "callout-margin-bottom",
+      "label": "Margin bottom",
+      "group": "Callouts",
+      "subgroup": "Layout",
+      "sassVar": "$callout-margin-bottom",
+      "widget": "slider",
+      "unit": "rem",
+      "min": 0,
+      "max": 3,
+      "step": 0.25,
+      "default": 1.25
+    },
+    {
       "id": "callout-color-note",
       "label": "Note",
       "group": "Callouts",
       "sassVar": "$callout-color-note",
       "widget": "color",
-      "default": "#0d6efd"
+      "default": "#0d6efd",
+      "subgroup": "Colors"
     },
     {
       "id": "callout-color-tip",
@@ -425,7 +607,8 @@
       "group": "Callouts",
       "sassVar": "$callout-color-tip",
       "widget": "color",
-      "default": "#198754"
+      "default": "#198754",
+      "subgroup": "Colors"
     },
     {
       "id": "callout-color-caution",
@@ -433,7 +616,8 @@
       "group": "Callouts",
       "sassVar": "$callout-color-caution",
       "widget": "color",
-      "default": "#fd7e14"
+      "default": "#fd7e14",
+      "subgroup": "Colors"
     },
     {
       "id": "callout-color-warning",
@@ -441,7 +625,8 @@
       "group": "Callouts",
       "sassVar": "$callout-color-warning",
       "widget": "color",
-      "default": "#ffc107"
+      "default": "#ffc107",
+      "subgroup": "Colors"
     },
     {
       "id": "callout-color-important",
@@ -449,7 +634,8 @@
       "group": "Callouts",
       "sassVar": "$callout-color-important",
       "widget": "color",
-      "default": "#dc3545"
+      "default": "#dc3545",
+      "subgroup": "Colors"
     }
   ]
 }
