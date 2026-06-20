@@ -2,7 +2,7 @@
   "name": "quarto-theme-tweaker",
   "displayName": "Quarto Theme Tweaker",
   "description": "Live Sass theming for Quarto documents: sliders and color pickers bound to Sass variables, with instant preview and write-back to custom.scss.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "EmilHvitfeldt",
   "license": "MIT",
   "author": "Emil Hvitfeldt",
@@ -49,7 +49,10 @@
         },
         "quartoThemeTweaker.preview": {
           "type": "string",
-          "enum": ["internal", "external"],
+          "enum": [
+            "internal",
+            "external"
+          ],
           "default": "internal",
           "description": "Show the live preview in an embedded webview ('internal') or your external browser ('external')."
         }
