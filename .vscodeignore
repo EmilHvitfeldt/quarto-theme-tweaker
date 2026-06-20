@@ -1,0 +1,15 @@
+# Files excluded from the packaged .vsix (everything not needed at runtime).
+.vscode/**
+.github/**
+src/**
+examples/**
+node_modules/**
+**/*.ts
+**/*.map
+esbuild.mjs
+tsconfig.json
+.gitignore
+.vscodeignore
+package-lock.json
+
+# Keep: dist/**, presets/**, package.json, README.md, LICENSE

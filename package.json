@@ -1,0 +1,74 @@
+{
+  "name": "quarto-theme-tweaker",
+  "displayName": "Quarto Theme Tweaker",
+  "description": "Live Sass theming for Quarto documents: sliders and color pickers bound to Sass variables, with instant preview and write-back to custom.scss.",
+  "version": "0.0.1",
+  "publisher": "emilhvitfeldt",
+  "license": "MIT",
+  "author": "Emil Hvitfeldt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmilHvitfeldt/quarto-theme-tweaker.git"
+  },
+  "keywords": [
+    "quarto",
+    "sass",
+    "scss",
+    "theme",
+    "revealjs"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "quartoThemeTweaker.open",
+        "title": "Quarto: Open Theme Tweaker"
+      }
+    ],
+    "configuration": {
+      "title": "Quarto Theme Tweaker",
+      "properties": {
+        "quartoThemeTweaker.debounceMs": {
+          "type": "number",
+          "default": 150,
+          "description": "Debounce (ms) before recompiling Sass on the slow path."
+        },
+        "quartoThemeTweaker.previewPort": {
+          "type": "number",
+          "default": 0,
+          "description": "Preview server port. 0 picks a free port automatically."
+        },
+        "quartoThemeTweaker.preview": {
+          "type": "string",
+          "enum": ["internal", "external"],
+          "default": "internal",
+          "description": "Show the live preview in an embedded webview ('internal') or your external browser ('external')."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.mjs --production",
+    "watch": "node esbuild.mjs --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@types/ws": "^8.5.10",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "sass": "^1.71.0",
+    "ws": "^8.16.0"
+  }
+}
