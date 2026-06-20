@@ -1,5 +1,10 @@
 # Quarto Theme Tweaker
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/EmilHvitfeldt.quarto-theme-tweaker?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=EmilHvitfeldt.quarto-theme-tweaker)
+[![Open VSX](https://img.shields.io/open-vsx/v/emilhvitfeldt/quarto-theme-tweaker?label=Open%20VSX)](https://open-vsx.org/extension/emilhvitfeldt/quarto-theme-tweaker)
+
+Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=EmilHvitfeldt.quarto-theme-tweaker) (VS Code) or [Open VSX](https://open-vsx.org/extension/emilhvitfeldt/quarto-theme-tweaker) (Positron, VSCodium, and other editors).
+
 A Positron/VS Code extension for live Sass theming of Quarto documents. Sliders and color pickers bound to Sass variables let you tweak a rendered Quarto document and see the changes instantly, then write the values back into `custom.scss`.
 
 It generalizes the original `hotload_server.py` prototype (kept under `examples/revealjs/`) into a schema-driven, multi-variable, hybrid engine.
