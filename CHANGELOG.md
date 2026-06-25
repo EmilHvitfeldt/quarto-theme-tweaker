@@ -7,6 +7,11 @@ All notable changes to the Quarto Theme Tweaker extension are documented here.
 - Command palette entry now uses a "Theme Tweaker" category instead of a "Quarto:" prefix, so it no longer looks like it ships with the official Quarto extension.
 - Added a user-facing Usage section to the top of the README.
 
+## [0.0.2] - 2026-06-20
+
+- Added support for HTML documents via the `quarto-html` (Bootstrap variables) preset, used as the fallback for any non-revealjs format.
+- Added `examples/html/` and `examples/website/` sample projects.
+
 ## [0.0.1] - 2026-06-20
 
 - Initial release.
