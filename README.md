@@ -9,6 +9,16 @@ A Positron/VS Code extension for live Sass theming of Quarto documents. Sliders 
 
 It generalizes the original `hotload_server.py` prototype (kept under `examples/revealjs/`) into a schema-driven, multi-variable, hybrid engine.
 
+## Usage
+
+1. Open a Quarto document (`.qmd`) in Positron or VS Code.
+2. Run **Theme Tweaker: Open Theme Tweaker** from the command palette (`Cmd/Ctrl+Shift+P`).
+3. A live preview opens alongside a control panel of sliders and color pickers bound to the document's Sass variables.
+4. Drag a slider or pick a color and the preview updates instantly. No re-render needed.
+5. When you're happy, click **Commit** to write the values back into `custom.scss` (you'll see a diff before anything is written). Use **Full render** for canonical `quarto render` output.
+
+That's it. Everything below is reference detail on formats, internals, and development.
+
 ## Supported formats
 
 The extension picks a control schema by detecting the output format from the document's YAML front matter:
