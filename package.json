@@ -31,7 +31,8 @@
     "commands": [
       {
         "command": "quartoThemeTweaker.open",
-        "title": "Quarto: Open Theme Tweaker"
+        "title": "Open Theme Tweaker",
+        "category": "Theme Tweaker"
       }
     ],
     "configuration": {
